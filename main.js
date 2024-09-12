@@ -70,7 +70,7 @@ function handleElementsIntoPage(repo) {
   let divEle = createElement("div", "repo-box", repo.name, reposData);
 
   let anchor = createElement("a", null, "Visit", divEle);
-  anchor.href = `https://github.com/${theInput.value}/${repo.name}`;
+  anchor.href = `https://github.com/${theInput.value.trim()}/${repo.name}`;
   anchor.setAttribute("target", "_blank");
 
   createElement("span", null, `Stars ${repo.stargazers_count}`, divEle);
